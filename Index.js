@@ -34,3 +34,47 @@ student.prototype = directionInfo;
 function getFullInfo() {
     return student;
 }
+
+//Task 3
+
+/* 3.1 Создать числовой массив и проинициализировать его 25 элементами с помощью случайных чисел.
+3.2 Вывести элементы с четными индексами.
+3.3 Вывести только четные элементы
+3.4 Вывести индексы нулевых элементов (элемент = 0)
+3.5 Посчитать количество нулевых элементов */
+
+function createRandomArray () {
+    const tempArr = [];
+    for (i = 0; i < 25; i++) {
+         tempArr.push(Math.round(Math.random()*10));
+    }
+    return tempArr;
+}
+
+function getElemOfEvenInd (arr) {
+    const resArr = arr.filter((_, index) => index % 2 === 0);
+    return resArr;
+}
+
+function getEvenElem (arr) {
+    const resArr = arr.filter(elements => elements % 2 === 0);
+    return resArr;
+}
+
+function getIndexOfZElem(arr) {
+    let resArray = [];
+    for (i=0; i < arr.length; i++) {
+        if (arr[i] === 0) {
+        resArray.push(i);
+        
+        } 
+    } return `Индексы элементов с нулевыми значениями: ${resArray}`;
+}
+
+function getSumOfZeroElem (arr) {
+    const resArr = arr.filter(elements => elements === 0);
+    return resArr.length;
+}
+
+
+
