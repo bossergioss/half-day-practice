@@ -76,5 +76,27 @@ function getSumOfZeroElem (arr) {
     return resArr.length;
 }
 
+// Task 4
+
+/* Создать классы:
+- Книга (автор, название, год издания, издательство)
+- Электронная версия книги (автор, название, год издания, издательство, формат файла, электронный номер) */
+
+class Book {
+    constructor(author, name, year, publishHouse){
+        this.author = author;
+        this.name = name;
+        this.year = year;
+        this.publishHouse = publishHouse;
+    }
+}
+
+class ElectronicBook  extends Book{
+    constructor(author, name, year, publishHouse, fileFormat, electronicNumber){
+    super(author, name, year, publishHouse);
+    this.fileFormat = fileFormat;
+    this.electronicNumber = electronicNumber;
+    }
+}
 
 
