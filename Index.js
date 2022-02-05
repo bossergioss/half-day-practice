@@ -9,3 +9,28 @@ function getSum(N) {
     }
     return res;
 }
+
+//Task 2
+
+/* 2.1 Создать объект Student, который содержит следующие свойства: имя, фамилию, пол, контактные данные.
+2.2 Создать объект, содержащий информацию о факультете и кафедре.
+2.3. Связать объекты между собой, т.е. прописать данные о факультете и кафедре для студента.
+2.4 Реализовать функцию вывода на экран полной информации о студенте. */
+
+const student = {
+    firstName: 'Bohdan', 
+    lastName: 'Kuznetsov',
+    isMale: 'true',
+    contData: '+380123456789'
+} 
+
+const directionInfo = {
+    faculty: 'electrotechnic',
+    department: 'electric machines'
+}
+
+student.prototype = directionInfo;
+
+function getFullInfo() {
+    return student;
+}
